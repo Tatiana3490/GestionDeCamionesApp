@@ -14,13 +14,19 @@ public class Database {
     public static Handle db;
 
     public static  void connect() throws ClassNotFoundException, SQLException {
-        Class.forName("com.mysql.cj.jdbc.Driver");
+        Class.forName(DRIVER);
         jdbi = Jdbi.create(CONNECTION_STRING, USERNAME, PASSWORD);
         jdbi.installPlugin(new SqlObjectPlugin());
         db = jdbi.open();
     }
 
-    public void close() throws SQLException {
+    public static void close() throws SQLException {
         db.close();
+    }
+
+    public static void disconnect() {
+        if (jdbi != null) {
+            jdbi = null;
+        }
     }
 }

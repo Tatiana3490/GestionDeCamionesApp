@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class RutaMapper implements RowMapper<Ruta> {
     @Override
     public Ruta map(ResultSet rs, StatementContext ctx) throws SQLException {
-        return new Ruta(rs.getInt("id"),
+        return new Ruta(rs.getInt("id_ruta"),
                 rs.getInt("camion_id"),
                 rs.getInt("almacen_origen_id"),
                 rs.getInt("almacen_destino_id"),

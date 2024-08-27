@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class AlmacenMapper implements RowMapper<Almacen> {
     @Override
     public Almacen map(ResultSet rs, StatementContext ctx) throws SQLException {
-        return new Almacen(rs.getInt("id"),
+        return new Almacen(rs.getInt("id_almacen"),
                 rs.getString("nombre"),
                 rs.getString("ubicacion"),
                 rs.getFloat("capacidad_maxima"));

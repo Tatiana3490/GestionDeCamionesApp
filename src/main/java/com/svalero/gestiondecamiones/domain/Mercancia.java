@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Mercancia {
-    private int id;
+    private Integer idMercancia;
     private String nombre;
     private float peso;
-    private int ruta_id;
-    private int almacen_destino_id;
+    private Integer idRuta;
+    private Integer idAlmacenDestino_;
 }

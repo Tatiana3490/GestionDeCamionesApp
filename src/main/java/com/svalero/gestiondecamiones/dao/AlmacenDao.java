@@ -1,17 +1,33 @@
 package com.svalero.gestiondecamiones.dao;
 
 import com.svalero.gestiondecamiones.domain.Almacen;
-import com.svalero.gestiondecamiones.domain.Camion;
+import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
+import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.jdbi.v3.sqlobject.statement.UseRowMapper;
 
 import java.util.List;
 
 public interface AlmacenDao {
 
-    @SqlQuery("SELECT * FROM almacenes")
+    @SqlQuery("SELECT * FROM almacen")
     @UseRowMapper(AlmacenMapper.class)
-    List<Almacen> getAllAlmacen();
+    List<Almacen> getAllAlmacenes();
 
+    @UseRowMapper(AlmacenMapper.class)
+    List<Almacen> getAlmacenes(@Bind("searchTerm") String searchTerm);
+
+    @SqlQuery("SELECT * FROM almacen WHERE id_almacen = ?")
+    @UseRowMapper(AlmacenMapper.class)
+    Almacen getAlmacen(Integer id);
+
+    @SqlUpdate("INSERT INTO almacen (nombre, ubicacion, capacidad_maxima) VALUES (?,?,?)")
+    Integer addAlmacen(String nombre, String ubicacion, float capacidad_maxima);
+
+    @SqlUpdate("UPDATE almacen SET nombre = ?, ubicacion = ?, capacidad_maxima = ? WHERE idRuta = ?")
+    int updateAlmacen(String nombre, String ubicacion, float capacidad_maxima, int finalID);
+
+    @SqlUpdate("DELETE FROM almacen WHERE idAlmacen = ?")
+    Integer removeAlmacen(int idAlmacen);
 
 }

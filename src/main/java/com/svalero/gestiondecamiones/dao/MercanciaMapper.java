@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class MercanciaMapper implements RowMapper<Mercancia> {
     @Override
     public Mercancia map(ResultSet rs, StatementContext ctx) throws SQLException {
-        return new Mercancia(rs.getInt("id"),
+        return new Mercancia(rs.getInt("id_mercancia"),
                 rs.getString("nombre"),
                 rs.getFloat("peso"),
                 rs.getInt("ruta_id"),

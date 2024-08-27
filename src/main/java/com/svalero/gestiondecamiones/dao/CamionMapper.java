@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class CamionMapper implements RowMapper<Camion> {
     @Override
     public Camion map(ResultSet rs, StatementContext ctx) throws SQLException {
-        return new Camion(rs.getInt("id"),
+        return new Camion(rs.getInt("id_camion"),
                 rs.getString("matricula"),
                 rs.getFloat("capacidad"),
                 rs.getString("estado"),
