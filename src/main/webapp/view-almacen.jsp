@@ -1,6 +1,4 @@
 <%@ page import="com.svalero.gestiondecamiones.dao.Database" %>
-<%@ page import="com.svalero.gestiondecamiones.domain.Camion" %>
-<%@ page import="com.svalero.gestiondecamiones.dao.CamionDao" %>
 <%@ page import="com.svalero.gestiondecamiones.domain.Almacen" %>
 <%@ page import="com.svalero.gestiondecamiones.dao.AlmacenDao" %>
 
@@ -41,7 +39,7 @@
                                         <p class="card-text mb-1"><strong>Capacidad: </strong><%= almacen.getCapacidad_maxima() %></p>
                                     </div>
                                     <div>
-                                        <a href="remove-almacen?idAlmacen=<%= almacen.getIdAlmacen() %>" type="button" class="btn btn-sm btn-outline-danger">Borrar</a>
+                                        <a href="remove-almacen?id=<%= almacen.getIdAlmacen() %>" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a>
                                     </div>
                                 </div>
                             </div>
