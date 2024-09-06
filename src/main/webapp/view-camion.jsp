@@ -22,7 +22,6 @@
         Camion camion = Database.jdbi.withExtension(CamionDao.class, dao-> dao.getCamion(idCamion));
     %>
 
-<%--Falta poner el link de la foto --%>
     <div class="cream-bg">
         <div class="container">
             <div class="row g-5 justify-content-evenly">

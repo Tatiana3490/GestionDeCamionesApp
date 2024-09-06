@@ -33,9 +33,9 @@
                 <!-- Tarjeta 1 -->
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="" alt="Camión 1" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                        <img src="images/Noticias%20camiones.png" alt="Camión 1" class="bd-placeholder-img card-img-top" width="100%" height="225">
                         <div class="card-body">
-                            <p class="card-text">Camión de carga pesada, modelo 2024, ideal para transporte de larga distancia.</p>
+                            <p class="card-text">Mantente actualizado con las noticias más actuales.</p>
                             <div class="d-flex justify-content-between align-items-center">
 
                                 <small class="text-body-secondary">Última actualización: 2 días</small>
@@ -46,9 +46,9 @@
                 <!-- Tarjeta 2 -->
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="https://example.com/camion2.jpg" alt="Camión 2" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                        <img src="images/Flota2.jpg" alt="Flota" class="bd-placeholder-img card-img-top" width="100%" height="225">
                         <div class="card-body">
-                            <p class="card-text">Camión refrigerado para transporte de alimentos y productos perecederos.</p>
+                            <p class="card-text">Echa un vistazo a nuestra flota.</p>
                             <div class="d-flex justify-content-between align-items-center">
 
                                 <small class="text-body-secondary">Última actualización: 5 días</small>
@@ -59,9 +59,9 @@
                 <!-- Tarjeta 3 -->
                 <div class="col">
                     <div class="card shadow-sm">
-                        <img src="https://example.com/camion3.jpg" alt="Camión 3" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                        <img src="images/Camion2.jpg" alt="Camion 2" class="bd-placeholder-img card-img-top" width="100%" height="225">
                         <div class="card-body">
-                            <p class="card-text">Camión cisterna para el transporte de líquidos y combustibles.</p>
+                            <p class="card-text">Nuestras rutas.</p>
                             <div class="d-flex justify-content-between align-items-center">
 
                                 <small class="text-body-secondary">Última actualización: 1 semana</small>
