@@ -13,8 +13,8 @@ public class MercanciaMapper implements RowMapper<Mercancia> {
         return new Mercancia(rs.getInt("id_mercancia"),
                 rs.getString("nombre"),
                 rs.getFloat("peso"),
-                rs.getInt("ruta_id"),
-                rs.getInt("almacen_destino_id"));
+                rs.getInt("id_ruta"),
+                rs.getInt("id_almacen_destino"));
     }
 
 }

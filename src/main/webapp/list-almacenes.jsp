@@ -44,7 +44,7 @@
             </tbody>
         </table>
 
-        <a href="edit-almacen" class="btn btn-success my-2">Añadir nuevo almacén</a>
+        <a href="edit-almacen.jsp" class="btn btn-success my-2">Añadir nuevo almacén</a>
     </section>
 
 

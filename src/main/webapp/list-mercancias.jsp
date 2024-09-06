@@ -46,7 +46,7 @@
             </tbody>
         </table>
 
-        <a href="edit-mercancia" class="btn btn-success my-2">Añadir nueva mercancía</a>
+        <a href="edit-mercancia.jsp" class="btn btn-success my-2">Añadir nueva mercancía</a>
     </section>
 
 

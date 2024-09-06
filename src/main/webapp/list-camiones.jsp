@@ -46,7 +46,7 @@
             </tbody>
         </table>
 
-        <a href="/edit-camion" class="btn btn-success my-2">Añadir nuevo camión</a>
+        <a href="edit-camion.jsp" class="btn btn-success my-2">Añadir nuevo camión</a>
     </section>
 
 

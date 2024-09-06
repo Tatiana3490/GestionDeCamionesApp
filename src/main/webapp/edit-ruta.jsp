@@ -41,6 +41,15 @@
                     <label for="fecha_salida" class="form-label">Fecha de salida</label>
                     <input type="text" name="fecha_salida" class="form-control" id="fecha_salida">
                 </div>
+
+                <script>
+                    $(function() {
+                        $("#fecha_salida").datepicker({
+                            dateFormat: "dd-mm-yy"
+                        });
+                    });
+                </script>
+
                 <div class="form-group col-md-6">
                     <label for="estado" class="form-label">Estado</label>
                     <select class="form-control" id="estado" name="estado" required>
@@ -56,6 +65,11 @@
         <br/>
         <div id="result"></div>
     </section>
+
 </main>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
 <%@include file="includes/footer.jsp" %>

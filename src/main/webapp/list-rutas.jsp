@@ -12,17 +12,17 @@
 
     <section class="py-5 text-center container">
 
-        <h1>Mercancías</h1>
+        <h1>Rutas</h1>
 
         <table id="example" class="table table-striped table-hover" style="width:100%">
             <thead>
             <tr>
                 <th>#</th>
                 <th>id_camion</th>
-                <th>id_almacén_origen</th>
-                <th>id_almacén_destino</th>
+                <th>id_almacen_origen</th>
+                <th>id_almacen_destino</th>
                 <th>Fecha de salida</th>
-                <th>estado</th>
+                <th>Estado</th>
                 <th></th>
             </tr>
             </thead>
@@ -40,7 +40,7 @@
                 <td><%= ruta.getFecha_salida() %></td>
                 <td><%= ruta.getEstado() %></td>
                 <td><a href="view-ruta.jsp" type="button" class="btn btn-sm btn-outline-secondary">Detalles</a>
-                    <a href="edit-ruta" type="button" class="btn btn-sm btn-outline-secondary">Modificar</a>
+                    <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modificar</a>
                     <a href="remove-ruta" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a>
                 </td>
             </tr>
@@ -50,7 +50,7 @@
             </tbody>
         </table>
 
-        <a href="edit-ruta" class="btn btn-success my-2">Añadir nueva ruta</a>
+        <a href="edit-ruta.jsp" class="btn btn-success my-2">Añadir nueva ruta</a>
     </section>
 
 
