@@ -18,7 +18,7 @@
   </a>
 
   <ul class="nav nav-pills">
-    <li class="nav-item"><a href="index.jsp" class="nav-link active" aria-current="page">Almacenes</a></li>
+    <li class="nav-item"><a href="list-almacenes.jsp" class="nav-link active" aria-current="page">Almacenes</a></li>
     <li class="nav-item"><a href="list-camiones.jsp" class="nav-link">Camiones</a></li>
     <li class="nav-item"><a href="list-mercancias.jsp" class="nav-link">Mercancías</a></li>
     <li class="nav-item"><a href="list-rutas.jsp" class="nav-link">Rutas</a></li>

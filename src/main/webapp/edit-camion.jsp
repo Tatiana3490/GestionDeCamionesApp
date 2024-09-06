@@ -34,19 +34,19 @@
 <div class="container mt-5">
   <h2>Registro de Camión</h2>
   <form <%--action="edit-camion" method="POST" enctype="multipart/form-data"--%>>
-    <!-- Matrícula -->
+
     <div class="form-group">
       <label for="matricula">Matrícula:</label>
       <input type="text" class="form-control" id="matricula" name="matricula" required>
     </div>
 
-    <!-- Capacidad -->
+
     <div class="form-group">
       <label for="capacidad">Capacidad (kg):</label>
       <input type="number" class="form-control" id="capacidad" name="capacidad" step="0.01" required>
     </div>
 
-    <!-- Estado -->
+
     <div class="form-group">
       <label for="estado">Estado:</label>
       <select class="form-control" id="estado" name="estado" required>
@@ -58,7 +58,7 @@
 
     <br>
 
-    <!-- Imagen -->
+
     <div class="form-group">
       <label for="imagen">Subir Imagen:</label>
       <input type="file" class="form-control-file" id="imagen" name="imagen" accept="image/*" required>
@@ -66,7 +66,7 @@
 
     <br>
 
-    <!-- Botón de envío -->
+
     <button type="submit" class="btn btn-primary">Registrar Camión</button>
   </form>
   <div id="result"></div>

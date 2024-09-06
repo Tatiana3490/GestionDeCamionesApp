@@ -5,7 +5,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@include file="includes/header.jsp" %>
-<%--
+
 <script type="text/javascript">
     $(document).ready(function() {
         $("form").on("submit", function(event) {
@@ -17,7 +17,8 @@
         });
     });
 </script>
---%>
+
+<%--
 <script>
     $(document).ready(function () {
         $("#edit-button").click(function (event) {
@@ -49,9 +50,7 @@
         });
     });
 </script>
-
-
-
+--%>
 
 <%
     int id;
@@ -59,7 +58,7 @@
     if (request.getParameter("id_mercancia") == null) {
         id = 0;
     } else {
-        id = Integer.parseInt(request.getParameter("id_mercancia"));
+        id = Integer.parseInt(request.getParameter("id"));
         Database.connect();
         mercancia = Database.jdbi.withExtension(MercanciaDao.class, dao-> dao.getMercancia(id));
     }
@@ -71,7 +70,7 @@
     </section>
 
     <section class="container">
-        <form class="" action="" method="post" content="text/html" enctype="multipart/form-data" >
+        <form class="" id="edit-form" action="" method="post" content="text/html" enctype="multipart/form-data" >
             <div class="row">
                 <div class="form-group col-md-6">
                     <label for="nombre" class="form-label">Nombre</label>
@@ -83,7 +82,7 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-success mt-3">Enviar</button>
+            <button id="edit-button" type="submit" class="btn btn-success mt-3">Enviar</button>
         </form>
         <br/>
         <div id="result"></div>

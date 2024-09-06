@@ -1,8 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
-<%@ page import="com.svalero.gestiondecamiones.dao.Database" %>
-<%@ page import="java.util.List" %>
-<%@ page import="com.svalero.gestiondecamiones.domain.Almacen" %>
-<%@ page import="com.svalero.gestiondecamiones.dao.AlmacenDao" %>
+
 
 <%@include file="includes/header.jsp" %>
 

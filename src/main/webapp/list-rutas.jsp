@@ -1,7 +1,5 @@
 <%@ page import="com.svalero.gestiondecamiones.dao.Database" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.svalero.gestiondecamiones.domain.Mercancia" %>
-<%@ page import="com.svalero.gestiondecamiones.dao.MercanciaDao" %>
 <%@ page import="com.svalero.gestiondecamiones.domain.Ruta" %>
 <%@ page import="com.svalero.gestiondecamiones.dao.RutaDao" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
