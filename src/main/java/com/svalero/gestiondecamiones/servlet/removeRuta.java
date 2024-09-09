@@ -25,10 +25,10 @@ public class removeRuta extends HttpServlet {
                     dao -> dao.removeRuta(idRuta));
 
             response.sendRedirect("list-rutas.jsp");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (ClassNotFoundException cnfe) {
+            cnfe.printStackTrace();
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }

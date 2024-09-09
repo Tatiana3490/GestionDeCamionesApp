@@ -1,6 +1,7 @@
 <%@ page import="com.svalero.gestiondecamiones.dao.Database" %>
 <%@ page import="com.svalero.gestiondecamiones.domain.Ruta" %>
 <%@ page import="com.svalero.gestiondecamiones.dao.RutaDao" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
 <%@include file="includes/header.jsp" %>
@@ -14,7 +15,7 @@
     </section>
 
     <%
-        Integer idRuta = Integer.parseInt(request.getParameter("idRuta"));
+        int idRuta = Integer.parseInt(request.getParameter("id"));
 
         Database.connect();
         Ruta ruta = Database.jdbi.withExtension(RutaDao.class, dao-> dao.getRuta(idRuta));

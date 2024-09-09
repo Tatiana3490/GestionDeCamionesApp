@@ -37,7 +37,7 @@
                 <td><%= ruta.getIdAlmacenDestino_() %></td>
                 <td><%= ruta.getFecha_salida() %></td>
                 <td><%= ruta.getEstado() %></td>
-                <td><a href="view-ruta.jsp" type="button" class="btn btn-sm btn-outline-secondary">Detalles</a>
+                <td><a href="view-ruta.jsp?id=<%= ruta.getIdRuta() %>" type="button" class="btn btn-sm btn-outline-secondary">Detalles</a>
                     <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modificar</a>
                     <a href="remove-ruta" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a>
                 </td>

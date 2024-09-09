@@ -1,8 +1,7 @@
 <%@ page import="com.svalero.gestiondecamiones.dao.Database" %>
-<%@ page import="com.svalero.gestiondecamiones.domain.Camion" %>
-<%@ page import="com.svalero.gestiondecamiones.dao.CamionDao" %>
 <%@ page import="com.svalero.gestiondecamiones.domain.Mercancia" %>
 <%@ page import="com.svalero.gestiondecamiones.dao.MercanciaDao" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
 <%@include file="includes/header.jsp" %>
@@ -16,7 +15,7 @@
     </section>
 
     <%
-        Integer idMercancia = Integer.parseInt(request.getParameter("idMercancia"));
+        int idMercancia = Integer.parseInt(request.getParameter("idMercancia"));
 
         Database.connect();
         Mercancia mercancia = Database.jdbi.withExtension(MercanciaDao.class, dao-> dao.getMercancia(idMercancia));

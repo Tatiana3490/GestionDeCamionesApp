@@ -15,16 +15,16 @@ public interface MercanciaDao {
 
     @SqlQuery("SELECT * FROM mercancia WHERE id_mercancia = ?")
     @UseRowMapper(MercanciaMapper.class)
-    Mercancia getMercancia(Integer id);
+    Mercancia getMercancia(int id);
 
     @SqlUpdate("INSERT INTO mercancia (nombre, peso) VALUES (?,?)")
-    Integer addMercancia(String nombre, float peso, Integer id_ruta, Integer id_almacen_destino);
+    Integer addMercancia(String nombre, float peso, int id_ruta, int id_almacen_destino);
 
-    @SqlUpdate("UPDATE mercancia SET nombre = ?, peso = ?, id_ruta = ?, id_almacen_destino = ?WHERE idMercancia = ?")
+    @SqlUpdate("UPDATE mercancia SET nombre = ?, peso = ?, id_ruta = ?, id_almacen_destino = ?WHERE id_mercancia = ?")
 
-    int updateMercancia(String nombre, float peso, Integer id_ruta, Integer id_almacen_destino, int finalID);
+    int updateMercancia(String nombre, float peso, int id_ruta, int id_almacen_destino, int finalID);
 
-    @SqlUpdate("DELETE FROM mercancia WHERE idMercancia = ?")
-    Integer removeMercancia(int idMercancia);
+    @SqlUpdate("DELETE FROM mercancia WHERE id_mercancia = ?")
+    int removeMercancia(int idMercancia);
 
 }

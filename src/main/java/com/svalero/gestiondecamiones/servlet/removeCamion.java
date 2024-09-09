@@ -17,17 +17,17 @@ public class removeCamion extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        int idCamion = Integer.parseInt(request.getParameter("id_camion"));
+        int idCamion = Integer.parseInt(request.getParameter("idCamion"));
 
         try {
             Database.connect();
             int affectedRows = Database.jdbi.withExtension(CamionDao.class,
                     dao -> dao.removeCamion(idCamion));
             response.sendRedirect("list-camiones.jsp");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (ClassNotFoundException cnfe) {
+            cnfe.printStackTrace();
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }

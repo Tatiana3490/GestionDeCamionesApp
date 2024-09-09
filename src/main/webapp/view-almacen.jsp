@@ -12,7 +12,7 @@
     </section>
 
     <%
-        Integer idAlmacen = Integer.parseInt(request.getParameter("idAlmacen"));
+        int idAlmacen = Integer.parseInt(request.getParameter("idAlmacen"));
 
         Database.connect();
         Almacen almacen = Database.jdbi.withExtension(AlmacenDao.class, dao-> dao.getAlmacen(idAlmacen));

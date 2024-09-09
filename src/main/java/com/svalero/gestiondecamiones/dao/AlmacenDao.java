@@ -24,10 +24,10 @@ public interface AlmacenDao {
     @SqlUpdate("INSERT INTO almacen (nombre, ubicacion, capacidad_maxima) VALUES (?,?,?)")
     Integer addAlmacen(String nombre, String ubicacion, float capacidad_maxima);
 
-    @SqlUpdate("UPDATE almacen SET nombre = ?, ubicacion = ?, capacidad_maxima = ? WHERE idRuta = ?")
+    @SqlUpdate("UPDATE almacen SET nombre = ?, ubicacion = ?, capacidad_maxima = ? WHERE id_almacen = ?")
     int updateAlmacen(String nombre, String ubicacion, float capacidad_maxima, int finalID);
 
-    @SqlUpdate("DELETE FROM almacen WHERE idAlmacen = ?")
+    @SqlUpdate("DELETE FROM almacen WHERE id_almacen = ?")
     Integer removeAlmacen(int idAlmacen);
 
 }
