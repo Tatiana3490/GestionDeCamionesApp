@@ -17,7 +17,7 @@ public class removeCamion extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        int idCamion = Integer.parseInt(request.getParameter("id"));
+        int idCamion = Integer.parseInt(request.getParameter("id_camion"));
 
         try {
             Database.connect();

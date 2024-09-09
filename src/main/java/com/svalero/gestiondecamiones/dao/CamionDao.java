@@ -24,7 +24,7 @@ public interface CamionDao {
     int updateCamion(String matricula, float capacidad, String estado, String imagen, int finalID);
 
     @SqlUpdate("DELETE FROM camion WHERE idCamion = ?")
-    Integer removeCamion(int idRuta);
+    Integer removeCamion(int idCamion);
 
 
 };
