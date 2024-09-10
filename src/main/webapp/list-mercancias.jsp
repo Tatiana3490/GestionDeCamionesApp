@@ -36,7 +36,7 @@
                 <td><%= mercancia.getIdRuta() %></td>
                 <td><%= mercancia.getIdAlmacenDestino_() %></td>
                 <td><a href="view-mercancia.jsp?idMercancia=<%= mercancia.getIdMercancia() %>" type="button" class="btn btn-sm btn-outline-secondary">Detalles</a>
-                    <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modificar</a>
+                    <a href="edit-mercancia.jsp?id_mercancia=<%= mercancia.getIdMercancia() %>" type="button" class="btn btn-sm btn-outline-secondary">Modificar</a>
                     <a href="remove-mercancia?idMercancia=<%= mercancia.getIdMercancia() %>" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a>
                 </td>
             </tr>

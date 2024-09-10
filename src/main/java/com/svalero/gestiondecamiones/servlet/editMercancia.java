@@ -27,8 +27,8 @@ public class editMercancia extends HttpServlet {
             }
             String nombre = request.getParameter("nombre");
             float peso = Float.parseFloat(request.getParameter("peso"));;
-            Integer id_ruta = Integer.parseInt(request.getParameter("id_ruta"));
-            Integer id_almacen_destino = Integer.parseInt(request.getParameter("id_almacen_destino"));
+            int id_ruta = Integer.parseInt(request.getParameter("id_ruta"));
+            int id_almacen_destino = Integer.parseInt(request.getParameter("id_almacen_destino"));
 
 
             Database.connect();

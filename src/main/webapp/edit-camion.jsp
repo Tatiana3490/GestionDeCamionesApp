@@ -7,15 +7,19 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    $("form").on("submit", function(event) {
-      event.preventDefault();
-      var formValue = $(this).serialize();
-      $.post("edit-camion", formValue, function(data) {
-        $("#result").html(data);
+      $("form").on("submit", function(event) {
+          event.preventDefault();
+          var formValue = $(this).serialize();
+          $.post("edit-camion", formValue, function(data) {
+              $("#result").html(data);
+          });
       });
-    });
   });
 </script>
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+<script src="https://malsup.github.io/jquery.form.js"></script> -->
 
 <%
   int id_camion;
@@ -33,7 +37,7 @@
 <body>
 <div class="container mt-5">
   <h2>Registro de Camión</h2>
-  <form <%--action="edit-camion" method="POST" enctype="multipart/form-data"--%>>
+  <form action="edit-camion" method="POST" enctype="multipart/form-data" id="formAdd">
 
     <div class="form-group">
       <label for="matricula">Matrícula:</label>
@@ -71,8 +75,22 @@
   </form>
   <div id="result"></div>
 </div>
+<p id="upload-error"></p>
 
 
 
 
 <%@include file="includes/footer.jsp" %>
+
+<!--
+<script>
+  $(document).ready(function() {
+    $('#formAdd').ajaxForm();
+  });
+</script>
+-->
+
+
+
+
+

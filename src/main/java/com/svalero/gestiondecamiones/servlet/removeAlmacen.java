@@ -23,7 +23,7 @@ public class removeAlmacen extends HttpServlet {
             int affectedRows = Database.jdbi.withExtension(AlmacenDao.class,
                     dao -> dao.removeAlmacen(idAlmacen));
 
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("list-almacenes.jsp");
         } catch (ClassNotFoundException cnfe) {
             cnfe.printStackTrace();
         } catch (SQLException sqle) {

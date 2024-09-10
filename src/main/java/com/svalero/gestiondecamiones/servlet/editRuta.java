@@ -27,9 +27,9 @@ public class editRuta extends HttpServlet {
             if (request.getParameter("id_ruta") != null) {
                 id = Integer.parseInt(request.getParameter("id_ruta"));
             }
-            Integer id_camion = Integer.parseInt(request.getParameter("id_camion"));
-            Integer id_almacen_origen = Integer.parseInt(request.getParameter("id_almacen_origen"));
-            Integer id_almacen_destino = Integer.parseInt(request.getParameter("id_almacen_destino"));
+            int id_camion = Integer.parseInt(request.getParameter("id_camion"));
+            int id_almacen_origen = Integer.parseInt(request.getParameter("id_almacen_origen"));
+            int id_almacen_destino = Integer.parseInt(request.getParameter("id_almacen_destino"));
             Date fecha_salida = (Date) DateUtils.parse(request.getParameter("fecha_salida"));
             String estado = request.getParameter("estado");
 

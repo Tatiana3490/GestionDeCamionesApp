@@ -36,7 +36,7 @@
                 <td><%= camion.getEstado() %></td>
                 <td><%= camion.getImagen()%></td>
                 <td><a href="view-camion.jsp?idCamion=<%= camion.getIdCamion()%>" type="button" class="btn btn-sm btn-outline-secondary">Detalles</a>
-                    <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modificar</a>
+                    <a href="edit-camion.jsp?id_camion=<%= camion.getIdCamion()%>" type="button" class="btn btn-sm btn-outline-secondary">Modificar</a>
                     <a href="remove-camion?idCamion=<%= camion.getIdCamion()%>" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a>
                 </td>
             </tr>

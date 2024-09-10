@@ -38,17 +38,17 @@ public class editCamion extends HttpServlet {
             Part imagenPart = request.getPart("imagen");
 
             // Guardar la imagen en disco
-            String imagePath = getServletContext().getAttribute("image-path").toString();
+            /*String imagePath = request.getServletContext().getInitParameter("image-path");
             if (!new File(imagePath).exists())
-                new File(imagePath).mkdir();
+                new File(imagePath).mkdir();*/
             String filename = null;
-            if (imagenPart.getSize() == 0) {
+            /*if (imagenPart.getSize() == 0) {
                 filename = "no-image.jpg";
-            } else {
+            } else {*/
                 filename = UUID.randomUUID() + ".jpg";
-                InputStream fileStream = imagenPart.getInputStream();
+               /* InputStream fileStream = imagenPart.getInputStream();
                 Files.copy(fileStream, Path.of(imagePath + File.separator + filename));
-            }
+            }*/
 
 
             Database.connect();
@@ -73,7 +73,7 @@ public class editCamion extends HttpServlet {
             sendError("¡Atencion!, Error al conectar con la base de datos", response);
         } catch (Exception e) {
             e.printStackTrace();
-            sendError("¡Atencion!, se ha producido una excepción", response);
+            sendError( e.getMessage(), response);
         }
     }
 

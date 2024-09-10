@@ -34,7 +34,7 @@
                 <td><%= almacen.getUbicacion() %></td>
                 <td><%= almacen.getCapacidad_maxima() %></td>
                 <td><a href="view-almacen.jsp?idAlmacen=<%= almacen.getIdAlmacen() %>" type="button" class="btn btn-sm btn-outline-secondary">Detalles</a>
-                    <a href="" type="button" class="btn btn-sm btn-outline-secondary">Modificar</a>
+                    <a href="edit-almacen.jsp?id_almacen=<%= almacen.getIdAlmacen() %>" type="button" class="btn btn-sm btn-outline-secondary">Modificar</a>
                     <a href="remove-almacen?id=<%= almacen.getIdAlmacen() %>" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a>
                 </td>
             </tr>
