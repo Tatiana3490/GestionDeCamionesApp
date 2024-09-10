@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Almacen {
-    private Integer idAlmacen;
+    private int idAlmacen;
     private String nombre;
     private String ubicacion;
     private float capacidad_maxima;

@@ -18,7 +18,7 @@ public interface MercanciaDao {
     Mercancia getMercancia(int id);
 
     @SqlUpdate("INSERT INTO mercancia (nombre, peso) VALUES (?,?)")
-    Integer addMercancia(String nombre, float peso, int id_ruta, int id_almacen_destino);
+    int addMercancia(String nombre, float peso, int id_ruta, int id_almacen_destino);
 
     @SqlUpdate("UPDATE mercancia SET nombre = ?, peso = ?, id_ruta = ?, id_almacen_destino = ?WHERE id_mercancia = ?")
 

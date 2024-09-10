@@ -19,15 +19,15 @@ public interface AlmacenDao {
 
     @SqlQuery("SELECT * FROM almacen WHERE id_almacen = ?")
     @UseRowMapper(AlmacenMapper.class)
-    Almacen getAlmacen(Integer id);
+    Almacen getAlmacen(int id);
 
     @SqlUpdate("INSERT INTO almacen (nombre, ubicacion, capacidad_maxima) VALUES (?,?,?)")
-    Integer addAlmacen(String nombre, String ubicacion, float capacidad_maxima);
+    int addAlmacen(String nombre, String ubicacion, float capacidad_maxima);
 
     @SqlUpdate("UPDATE almacen SET nombre = ?, ubicacion = ?, capacidad_maxima = ? WHERE id_almacen = ?")
     int updateAlmacen(String nombre, String ubicacion, float capacidad_maxima, int finalID);
 
     @SqlUpdate("DELETE FROM almacen WHERE id_almacen = ?")
-    Integer removeAlmacen(int idAlmacen);
+    int removeAlmacen(int idAlmacen);
 
 }

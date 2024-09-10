@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Camion {
-    private Integer idCamion;
+    private int idCamion;
     private String matricula;
     private float capacidad;
     private String estado;

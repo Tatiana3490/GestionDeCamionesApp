@@ -15,16 +15,16 @@ public interface CamionDao {
 
     @SqlQuery("SELECT * FROM camion WHERE id_camion = ?")
     @UseRowMapper(CamionMapper.class)
-    Camion getCamion(Integer id);
+    Camion getCamion(int     id);
 
     @SqlUpdate("INSERT INTO camion (matricula, capacidad, estado, imagen) VALUES (?,?,?,?)")
-    Integer addCamion(String matricula, float capacidad, String estado, String imagen);
+    int addCamion(String matricula, float capacidad, String estado, String imagen);
 
     @SqlUpdate("UPDATE camion SET matricula = ?, capacidad = ?, estado = ?, imagen = ? WHERE id_camion = ?")
     int updateCamion(String matricula, float capacidad, String estado, String imagen, int finalID);
 
     @SqlUpdate("DELETE FROM camion WHERE id_camion = ?")
-    Integer removeCamion(int idCamion);
+    int removeCamion(int idCamion);
 
 
 };

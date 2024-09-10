@@ -10,10 +10,10 @@ import java.util.Date;
 @AllArgsConstructor
 @Data
 public class Ruta {
-    private Integer idRuta;
-    private Integer idCamion;
-    private Integer idAlmacenOrigen_;
-    private Integer idAlmacenDestino_;
+    private int idRuta;
+    private int idCamion;
+    private int idAlmacenOrigen_;
+    private int idAlmacenDestino_;
     private Date fecha_salida;
     private String estado;
 }
