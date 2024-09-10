@@ -5,7 +5,7 @@
 
 <%@include file="includes/header.jsp" %>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
     $(document).ready(function() {
         $("form").on("submit", function(event) {
             event.preventDefault();
@@ -15,7 +15,7 @@
             });
         });
     });
-</script>
+</script>-->
 
 <%
     int id;
