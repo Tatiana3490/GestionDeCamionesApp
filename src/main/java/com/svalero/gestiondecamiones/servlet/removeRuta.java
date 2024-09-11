@@ -17,7 +17,7 @@ public class removeRuta extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        int idRuta = Integer.parseInt(request.getParameter("id"));
+        int idRuta = Integer.parseInt(request.getParameter("idRuta"));
 
         try {
             Database.connect();

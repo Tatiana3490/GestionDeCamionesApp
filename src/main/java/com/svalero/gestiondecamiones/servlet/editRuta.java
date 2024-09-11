@@ -30,7 +30,7 @@ public class editRuta extends HttpServlet {
             int id_camion = Integer.parseInt(request.getParameter("id_camion"));
             int id_almacen_origen = Integer.parseInt(request.getParameter("id_almacen_origen"));
             int id_almacen_destino = Integer.parseInt(request.getParameter("id_almacen_destino"));
-            Date fecha_salida = (Date) DateUtils.parse(request.getParameter("fecha_salida"));
+            java.sql.Date fecha_salida = (Date) DateUtils.parse(request.getParameter("fecha_salida"));
             String estado = request.getParameter("estado");
 
             Database.connect();
@@ -54,7 +54,7 @@ public class editRuta extends HttpServlet {
             sendError("¡Atencion!, Error al conectar con la base de datos", response);
         } catch (Exception e) {
             e.printStackTrace();
-            sendError("¡Atencion!, se ha producido una excepcion", response);
+            sendError(e.getMessage(), response);
         }
     }
 
@@ -74,11 +74,11 @@ public class editRuta extends HttpServlet {
 
     }
     private void sendError (String message, HttpServletResponse response) throws IOException {
-            response.getWriter().println("<div class='alert alert-danger' role='alert'>" + message + "</div>");
+        response.getWriter().println("<div class='alert alert-danger' role='alert'>" + message + "</div>");
     }
 
     private void sendMessage (String message, HttpServletResponse response) throws IOException {
-            response.getWriter().println("<div class='alert alert-success' role='alert'>" + message + "</div>");
+        response.getWriter().println("<div class='alert alert-success' role='alert'>" + message + "</div>");
     }
 
 }

@@ -17,11 +17,10 @@ public interface MercanciaDao {
     @UseRowMapper(MercanciaMapper.class)
     Mercancia getMercancia(int id);
 
-    @SqlUpdate("INSERT INTO mercancia (nombre, peso) VALUES (?,?)")
+    @SqlUpdate("INSERT INTO mercancia (nombre, peso, id_ruta, id_almacen_destino) VALUES (?,?,?,?)")
     int addMercancia(String nombre, float peso, int id_ruta, int id_almacen_destino);
 
-    @SqlUpdate("UPDATE mercancia SET nombre = ?, peso = ?, id_ruta = ?, id_almacen_destino = ?WHERE id_mercancia = ?")
-
+    @SqlUpdate("UPDATE mercancia SET nombre = ?, peso = ?, id_ruta = ?, id_almacen_destino = ? WHERE id_mercancia = ?")
     int updateMercancia(String nombre, float peso, int id_ruta, int id_almacen_destino, int finalID);
 
     @SqlUpdate("DELETE FROM mercancia WHERE id_mercancia = ?")

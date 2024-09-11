@@ -15,7 +15,7 @@
     </section>
 
     <%
-        int idRuta = Integer.parseInt(request.getParameter("id"));
+        int idRuta = Integer.parseInt(request.getParameter("idRuta"));
 
         Database.connect();
         Ruta ruta = Database.jdbi.withExtension(RutaDao.class, dao-> dao.getRuta(idRuta));

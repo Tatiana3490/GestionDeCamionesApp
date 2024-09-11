@@ -5,7 +5,7 @@
 
 <%@include file="includes/header.jsp" %>
 
-<!--<script type="text/javascript">
+<script type="text/javascript">
     $(document).ready(function() {
         $("form").on("submit", function(event) {
             event.preventDefault();
@@ -15,7 +15,7 @@
             });
         });
     });
-</script>-->
+</script>
 
 <%
     int id;
@@ -23,7 +23,7 @@
     if (request.getParameter("id_almacen") == null) {
         id = 0;
     } else {
-        id = Integer.parseInt(request.getParameter("id"));
+        id = Integer.parseInt(request.getParameter("id_almacen"));
         Database.connect();
         almacen = Database.jdbi.withExtension(AlmacenDao.class, dao-> dao.getAlmacen(id));
     }
@@ -35,21 +35,39 @@
     </section>
 
     <section class="container">
-        <form class="" action="" method="post" content="text/html" enctype="multipart/form-data" >
+        <form class="" action="" method="post" content="text/html" >
+            <% if(request.getParameter("id_almacen") == null) { %>
             <div class="row">
                 <div class="form-group col-md-6">
+                    <label for="nombre_new" class="form-label">Nombre</label>
+                    <input type="text" name="nombre" class="form-control" id="nombre_new">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="ubicacion_new" class="form-label">Ubicación</label>
+                    <input type="text" name="ubicacion" class="form-control" id="ubicacion_new">
+                </div>
+            </div>
+            <div class="form-group mt-1">
+                <label class="form-label" for="capacidad_maxima_new">Capacidad máxima</label>
+                <textarea class="form-control" name="capacidad_maxima" id="capacidad_maxima_new" rows="3"></textarea>
+            </div>
+            <% } else { %>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <input type="hidden" id="idAlmacen" name="idAlmacen" value="<%= almacen.getIdAlmacen() %>"/>
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" name="nombre" class="form-control" id="nombre">
+                    <input type="text" name="nombre" class="form-control" id="nombre" value="<%= almacen.getNombre() %>" />
                 </div>
                 <div class="form-group col-md-6">
                     <label for="ubicacion" class="form-label">Ubicación</label>
-                    <input type="text" name="ubicacion" class="form-control" id="ubicacion">
+                    <input type="text" name="ubicacion" class="form-control" id="ubicacion" value="<%= almacen.getUbicacion() %>" />
                 </div>
             </div>
             <div class="form-group mt-1">
                 <label class="form-label" for="capacidad_maxima">Capacidad máxima</label>
-                <textarea class="form-control" name="capacidad_maxima" id="capacidad_maxima" rows="3"></textarea>
+                <textarea class="form-control" name="capacidad_maxima" id="capacidad_maxima" rows="3" ><%= almacen.getCapacidad_maxima() %></textarea>
             </div>
+            <% } %>
 
             <button type="submit" class="btn btn-success mt-3">Enviar</button>
         </form>

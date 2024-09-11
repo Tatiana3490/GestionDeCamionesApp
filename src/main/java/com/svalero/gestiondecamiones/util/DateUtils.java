@@ -17,8 +17,8 @@ public class DateUtils {
     /* Para pasar de String a Date*/
     public static  Date parse(String date) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_PATTERN);
-        return new Date(dateFormat.parse(date).getTime());
-
+        Date fecha =  dateFormat.parse(date);
+        return new java.sql.Date(fecha.getTime());
     }
 
 }

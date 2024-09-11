@@ -17,7 +17,7 @@ public class removeMercancia extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        int idMercancia = Integer.parseInt(request.getParameter("id"));
+        int idMercancia = Integer.parseInt(request.getParameter("idMercancia"));
 
         try {
             Database.connect();
