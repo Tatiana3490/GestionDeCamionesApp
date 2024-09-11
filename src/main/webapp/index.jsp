@@ -21,7 +21,6 @@
                     <a href="list-almacenes.jsp" class="btn btn-primary my-2">Almacenes</a>
                     <a href="list-rutas.jsp" class="btn btn-primary my-2">Rutas</a>
                     <a href="list-mercancias.jsp" class="btn btn-primary my-2">Mercancías</a>
-                    <a href="buscar.jsp" class="btn btn-secondary my-2">Buscar</a>
                 </p>
             </div>
         </div>

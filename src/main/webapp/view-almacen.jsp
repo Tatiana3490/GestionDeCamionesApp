@@ -17,7 +17,7 @@
         Database.connect();
         Almacen almacen = Database.jdbi.withExtension(AlmacenDao.class, dao-> dao.getAlmacen(idAlmacen));
     %>
-    <%--Falta poner el link de la foto --%>
+
 <div class="cream-bg">
     <div class="container">
         <div class="row g-5 justify-content-evenly">
