@@ -1,6 +1,8 @@
 package com.svalero.gestiondecamiones.dao;
 
+import com.svalero.gestiondecamiones.domain.Almacen;
 import com.svalero.gestiondecamiones.domain.Ruta;
+import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.jdbi.v3.sqlobject.statement.UseRowMapper;
@@ -28,4 +30,6 @@ public interface RutaDao {
 
     @SqlUpdate("DELETE FROM ruta WHERE id_ruta = ?")
     int removeRuta(int idRuta);
+
+
 }

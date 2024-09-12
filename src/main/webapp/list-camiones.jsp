@@ -8,41 +8,27 @@
 
 <main>
 
-    <div class="d-flex justify-content-center align-items-center" style="height: 20vh;">
-        <div class="col-md-8">
-            <form>
-                <div class="row">
-
-                    <div class="col-md-6 mb-2">
-                        <label for="matricula" class="form-label">Nº de matrícula</label>
-                        <input type="text" class="form-control" id="matricula">
-                    </div>
-
-                    <div class="col-md-6 mb-2">
-                        <label for="ubicacion" class="form-label">Ubicación del almacén</label>
-                        <input type="text" class="form-control" id="ubicacion">
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary w-100">Buscar</button>
-            </form>
-        </div>
-    </div>
-
-
-
     <section class="py-5 text-center container">
 
         <h1>Camiones</h1>
+        <div class="d-flex justify-content-center align-items-center" style="height: 20vh;">
+            <div class="col-md-8">
+                <form action="search-camion.jsp">
+                    <input type="text" name="matricula" placeholder="Nº de matricula"/>
+                    <input type="text" name="estado" placeholder="Estado del camion"/>
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
 
         <table id="example" class="table table-striped table-hover" style="width:100%">
             <thead>
             <tr>
                 <th>#</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Client</th>
-                <th>Type trip</th>
+                <th>Matricula</th>
+                <th>Capacidad (kg.)</th>
+                <th>Estado</th>
+                <th>Imagen</th>
                 <th></th>
             </tr>
             </thead>

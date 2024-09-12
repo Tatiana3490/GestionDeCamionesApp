@@ -32,6 +32,7 @@ public interface AlmacenDao {
 
     @SqlQuery("SELECT * FROM almacen WHERE nombre LIKE CONCAT('%',:searchTerm,'%') " +
             "AND ubicacion LIKE CONCAT('%',:searchTerm2,'%')")
+
     @UseRowMapper(AlmacenMapper.class)
     List<Almacen> searchAlmacen(@Bind("searchTerm") String searchTerm, @Bind("searchTerm2") String searchTerm2);
 

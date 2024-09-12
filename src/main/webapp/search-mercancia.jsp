@@ -10,12 +10,12 @@
 
     <section class="py-5 text-center container">
 
-        <h1>Mercancías</h1>
+        <h1>Mercancía encontrada</h1>
         <div class="d-flex justify-content-center align-items-center" style="height: 20vh;">
             <div class="col-md-8">
-                <form action="search-mercancia.jsp">
-                    <input type="text" name="nombre" placeholder="Nombre de la mercancia"/>
-                    <input type="text" name="id_almacen_destino" placeholder="Id del almacen de destino"/>
+                <form action="search-almacen.jsp">
+                    <input type="text" name="nombre" placeholder="Nombre de almacen"/>
+                    <input type="text" name="ubicacion" placeholder="Ubicacion del almacen"/>
                     <button type="submit">Buscar</button>
                 </form>
             </div>
@@ -35,7 +35,9 @@
             <tbody>
             <%
                 Database.connect();
-                List<Mercancia> mercancias = Database.jdbi.withExtension(MercanciaDao.class, MercanciaDao::getAllMercancias);
+                String nombre = request.getParameter("nombre");
+                String id_almacen_destino = request.getParameter("id_almacen_destino");
+                List<Mercancia> mercancias = Database.jdbi.withExtension(MercanciaDao.class, dao -> dao.searchMercancia(nombre, id_almacen_destino));
                 for (Mercancia mercancia : mercancias) {
             %>
             <tr>
@@ -44,21 +46,13 @@
                 <td><%= mercancia.getPeso() %></td>
                 <td><%= mercancia.getIdRuta() %></td>
                 <td><%= mercancia.getIdAlmacenDestino_() %></td>
-                <td><a href="view-mercancia.jsp?idMercancia=<%= mercancia.getIdMercancia() %>" type="button" class="btn btn-sm btn-outline-secondary">Detalles</a>
-                    <a href="edit-mercancia.jsp?id_mercancia=<%= mercancia.getIdMercancia() %>" type="button" class="btn btn-sm btn-outline-secondary">Modificar</a>
-                    <a href="remove-mercancia?idMercancia=<%= mercancia.getIdMercancia() %>" type="button" class="btn btn-sm btn-outline-danger">Eliminar</a>
-                </td>
             </tr>
             <%
                 }
             %>
             </tbody>
         </table>
-
-        <a href="edit-mercancia.jsp" class="btn btn-success my-2">Añadir nueva mercancía</a>
     </section>
 
 
 </main>
-
-<%@include file="includes/footer.jsp" %>

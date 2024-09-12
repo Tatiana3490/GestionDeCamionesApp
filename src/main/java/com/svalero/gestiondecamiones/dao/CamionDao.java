@@ -1,6 +1,8 @@
 package com.svalero.gestiondecamiones.dao;
 
+import com.svalero.gestiondecamiones.domain.Almacen;
 import com.svalero.gestiondecamiones.domain.Camion;
+import org.jdbi.v3.sqlobject.customizer.Bind;
 import org.jdbi.v3.sqlobject.statement.SqlQuery;
 import org.jdbi.v3.sqlobject.statement.SqlUpdate;
 import org.jdbi.v3.sqlobject.statement.UseRowMapper;
@@ -25,6 +27,12 @@ public interface CamionDao {
 
     @SqlUpdate("DELETE FROM camion WHERE id_camion = ?")
     int removeCamion(int idCamion);
+
+    @SqlQuery("SELECT * FROM camion WHERE matricula LIKE CONCAT('%',:searchTerm,'%') " +
+            "AND estado LIKE CONCAT('%',:searchTerm2,'%')")
+
+    @UseRowMapper(CamionMapper.class)
+    List<Camion> searchCamion(@Bind("searchTerm") String searchTerm, @Bind("searchTerm2") String searchTerm2);
 
 
 };
