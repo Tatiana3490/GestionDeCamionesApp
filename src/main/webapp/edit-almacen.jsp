@@ -54,7 +54,7 @@
             <% } else { %>
             <div class="row">
                 <div class="form-group col-md-6">
-                    <input type="hidden" id="idAlmacen" name="idAlmacen" value="<%= almacen.getIdAlmacen() %>"/>
+                    <input type="hidden" id="id_almacen" name="id_almacen" value="<%= almacen.getIdAlmacen() %>"/>
                     <label for="nombre" class="form-label">Nombre</label>
                     <input type="text" name="nombre" class="form-control" id="nombre" value="<%= almacen.getNombre() %>" />
                 </div>
