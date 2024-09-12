@@ -11,20 +11,12 @@
     <section class="py-5 text-center container">
 
         <h1>Camiones</h1>
-        <div class="d-flex justify-content-center align-items-center mb-7" style="height: 20vh;">
-            <div class="col-md-6">
-                <form action="search-camion.jsp" class="p-4 bg-light shadow-sm rounded">
-                    <div class="mb-3">
-                        <label for="matricula" class="form-label">Nº de matrícula</label>
-                        <input type="text" class="form-control" id="matricula" name="matricula" placeholder="Introduce la matrícula">
-                    </div>
-                    <div class="mb-3">
-                        <label for="estado" class="form-label">Estado del camión</label>
-                        <input type="text" class="form-control" id="estado" name="estado" placeholder="Introduce el estado">
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-primary w-50">Buscar</button>
-                    </div>
+        <div class="d-flex justify-content-center align-items-center" style="height: 20vh;">
+            <div class="col-md-8">
+                <form action="search-camion.jsp">
+                    <input type="text" name="matricula" placeholder="Nº de matricula"/>
+                    <input type="text" name="estado" placeholder="Estado del camion"/>
+                    <button type="submit">Buscar</button>
                 </form>
             </div>
         </div>
